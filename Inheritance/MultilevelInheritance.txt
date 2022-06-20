@@ -1,0 +1,41 @@
+ class Addition{
+	public int add(int a,int b) {
+		return a+b;
+	}
+	 public Addition (){
+		System.out.println("Addition");
+	 }
+	
+	}
+
+class Subtraction extends Addition{
+	public Subtraction() {
+		System.out.println("substraction");
+	}
+	public int sub(int c,int d) {
+		return c-d;
+		
+	}
+}
+class Multiplication extends Subtraction{
+	public int mul(int x,int y) {
+		return x*y;
+	}
+	public Multiplication() {
+		System.out.println("Multiplication");
+	}
+}
+
+public class MulitilevelInheritance {
+
+	public static void main(String[] args) {
+		Multiplication m= new Multiplication();
+		int result=m.add(2, 3);
+		int result1=m.sub(9, 4);
+		int result2=m.mul(4, 6);
+		System.out.println(result +","+ result1 +","+result2);
+		// TODO Auto-generated method stub
+
+	}
+
+}
